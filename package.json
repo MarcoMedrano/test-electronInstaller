@@ -1,5 +1,5 @@
 {
-  "name": "test",
+  "name": "My Installer Test",
   "productName": "test",
   "version": "1.0.0",
   "description": "My Electron application description",
@@ -7,6 +7,7 @@
   "scripts": {
     "start": "electron-forge start",
     "package": "electron-forge package",
+    "package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=assets/icons/mac/icon.icns --prune=true --out=release-builds",
     "make": "electron-forge make",
     "publish": "electron-forge publish",
     "lint": "eslint src --color"
@@ -29,7 +30,8 @@
         ]
       },
       "electronPackagerConfig": {
-        "packageManager": "npm"
+        "packageManager": "npm",
+        "icon": "assets/icons/mac/icon.icns"
       },
       "electronWinstallerConfig": {
         "name": "test"
@@ -55,6 +57,7 @@
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
     "electron-forge": "^5.1.1",
+    "electron-packager": "^11.1.0",
     "electron-prebuilt-compile": "1.8.3",
     "eslint": "^3.19.0",
     "eslint-config-airbnb": "^15.1.0",
