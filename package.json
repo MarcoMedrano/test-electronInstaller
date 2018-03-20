@@ -1,5 +1,5 @@
 {
-  "name": "My Installer Test",
+  "name": "My_Installer_Test",
   "productName": "test",
   "version": "1.0.0",
   "description": "My Electron application description",
@@ -7,7 +7,7 @@
   "scripts": {
     "start": "electron-forge start",
     "package": "electron-forge package",
-    "package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=assets/icons/mac/icon.icns --prune=true --out=release-builds",
+    "installer-mac": "electron-installer-dmg ./out/test-darwin-x64/test.app installer3",
     "make": "electron-forge make",
     "publish": "electron-forge publish",
     "lint": "eslint src --color"
@@ -57,6 +57,7 @@
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
     "electron-forge": "^5.1.1",
+    "electron-installer-dmg": "^0.2.1",
     "electron-packager": "^11.1.0",
     "electron-prebuilt-compile": "1.8.3",
     "eslint": "^3.19.0",
